@@ -94,7 +94,10 @@ Increasing the collisions of similar sentences.
 Because laur_ai is trained on an amount of loosely structured data, fits a model off of these responses, and produces outputs based off of the model, laur_ai's operaton is similar to unsupervised learning and can respond to any topic provided the data it is trained upon recognizes it.
 
 ### List of Popular topics
+Since laur_ai is modelled to produce responses similar to a particular human user, it often responds using internet memes and humuor. It responds with a unique form of internet humor that acts as an expressive outlet for the millenial and gen Z generations.
+
 The following is a list of topics that Laur.AI will respond well to because it is prevalent in the training data.
 * Truth or Dare
 * Birthdays
 * Ask Me Anything (AMA) / Q and A
+* Software, Robots, and AI
