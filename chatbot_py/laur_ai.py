@@ -143,6 +143,8 @@ class LaurAI:
         
         # print(finalText)
         return finalText
+    
+
 
     def determine_most_similar_context(self, lemma_line, similarity_threshold=0.05):
         '''
@@ -157,10 +159,24 @@ class LaurAI:
         # set column of 1's for words in lemma line
         for i in lemma_line["Lemmas"].split(' '):
             if i in valid_sentence.columns:
-                # if the column exists, laur.ai recognizes the word
-                # if laur.ai recognizes the word, it will on it
-                # otherwise, do not
-                valid_sentence.loc[:, i] = 1
+                    # if the column exists, laur.ai recognizes the word
+                    # if laur.ai recognizes the word, it will on it
+                    # otherwise, do not
+                    valid_sentence.loc[:, i] = 1
+            else:
+                try:
+                    for syn in wordnet.synsets(i):
+                        if syn in valid_sentence.columns:
+                            # if the column exists, laur.ai recognizes the word
+                            # if laur.ai recognizes the word, it will on it
+                            # otherwise, do not
+                            valid_sentence.loc[:, i] = 0.1
+                            break
+                except AttributeError:
+                    # Module has no attribute synsets 
+                    # (you have entered something that doesn't exist)
+                    break
+        
         # find cosine similarity
         cosine = 1 - pairwise_distances(self.bag, valid_sentence, metric="cosine")
         # prepare data to be used in series with data's index
