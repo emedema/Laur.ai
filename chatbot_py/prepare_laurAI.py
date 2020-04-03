@@ -20,4 +20,4 @@ df.to_csv("data/master_data.csv", index=False)
 # clean selected subset
 data_cleaner = DataCleaner()
 cleaned_data = data_cleaner.clean_data(df)
-cleaned_data.to_pickle("data/master_data_cleaned.pkl")
+cleaned_data.to_pickle("data/master_data_cleaned.pkl", protocol=4)
