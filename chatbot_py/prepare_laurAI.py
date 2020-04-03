@@ -14,7 +14,7 @@ print("Training Laur.AI")
 
 # select subset of data
 df = read_csv("data/scraped_data.csv")
-df = df.sample(n=20000)
+df = df.sample(n=17500)
 df.to_csv("data/master_data.csv", index=False)
 
 # clean selected subset
