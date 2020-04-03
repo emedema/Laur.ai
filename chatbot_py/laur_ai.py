@@ -1,6 +1,5 @@
 # import pandas
 import nltk
-import numpy
 from pandas import DataFrame, Series, read_csv, read_pickle
 from re import sub
 from nltk.stem import wordnet
@@ -187,16 +186,15 @@ class LaurAI:
         return max_index[i]
 
 
-
-
 print("Please wait as Laur.AI loads")
 
 data_master = read_csv("data/master_data.csv")
 laurBot = LaurAI(data_master)
 
-# First we need to clean the data, so it is all lower case and without special characters or numbers
-# We can then tokenize the data, which means splitting it up into words instead of a phrase. We also
-# need to know the type of word
+# First we need to clean the data, so it is all lower case and without special 
+# characters or numbers
+# We can then tokenize the data, which means splitting it up into words instead
+# of a phrase. We also need to know the type of word
 
 # Then we lematize which means to convert the word into it's base form
 laurBot.create_lemma()
@@ -206,7 +204,6 @@ laurBot.create_bag_of_words()
 
 
 # Then we can ask a question
-# laurBot.askQuestion("What is a funny movie we can watch?")
 print("Ask me anything :)")
 print("Control C or Type \"Bye\" to quit")
 while(True):
@@ -217,3 +214,5 @@ while(True):
     else:
         response = laurBot.askQuestion(context.lower())
         print(response)
+
+print("Thank you for talking to Laur.AI")
