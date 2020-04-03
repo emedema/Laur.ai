@@ -57,8 +57,8 @@ To handle the errors in the code, we used the TextBlob implementation of autocor
 
 This allows the user to still have a logical communication with the chatbot, even if a missplet input is passed in as context.
 
-* > im sorry im just trying to testt autocorrect    
-* Well, I got one for this, so that's good.
+> im sorry im just trying to testt autocorrect    
+Well, I got one for this, so that's good.
 
 In this example, testt is recognized as test and passed in to the app.
 
@@ -68,8 +68,8 @@ Our solution used named entity recognition to try to handle cases where the bot 
 
 This allows the user to recieve a logical response when the context is unsimilar to the training data.
 
-* > microsoft
-* Sorry :,( I don't know what microsoft is!
+> microsoft
+Sorry :,( I don't know what microsoft is!
 
 
 ## Topics
