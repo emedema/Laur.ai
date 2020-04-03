@@ -69,6 +69,7 @@ Our solution used named entity recognition to try to handle cases where the bot 
 This allows the user to recieve a logical response when the context is unsimilar to the training data.
 
 > microsoft
+
 Sorry :,( I don't know what microsoft is!
 
 
