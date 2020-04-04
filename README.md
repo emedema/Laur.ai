@@ -1,6 +1,13 @@
 # Laur.ai
 The goal of this project is to create a chatbot capable of a coherent and realistic 30 turns of conversation. This must be accomplished using proper communication, structure, and planning in order to accurately represent the industry standards.
 
+## Contributors
+The following algorithm was created by:
+* **Kathryn Lecha** - [kzlecha](https://github.com/kzlecha)
+* **Emily Medema** - [emedema](https://github.com/emedema)
+* **Nathan Nesbitt** - [Nathan-Nesbitt](https://github.com/Nathan-Nesbitt)
+* **Lauren St.Clair** - [laurenstclair](https://github.com/laurenstclair)
+
 ## Scenario
 Laur.ai is a chatbot designed to help people practice and simulate first meet-up conversations. This means that the bot will cover a lot of general topics for people to talk about. Users will start by asking a question about something they are passionate about. If Laur does not know the topic she will respond by saying she does not know, and propose a new idea. If she does know the topic, the conversation will continue until we reach an unknown factor in the conversation/end of Laur’s knowledge.
 
