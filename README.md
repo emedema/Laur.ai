@@ -2,7 +2,7 @@
 The goal of this project is to create a chatbot capable of a coherent and realistic 30 turns of conversation. This must be accomplished using proper communication, structure, and planning in order to accurately represent the industry standards.
 
 ## Contributors
-The following algorithm was created by:
+Laur.ai was created by:
 * **Kathryn Lecha** - [kzlecha](https://github.com/kzlecha)
 * **Emily Medema** - [emedema](https://github.com/emedema)
 * **Nathan Nesbitt** - [Nathan-Nesbitt](https://github.com/Nathan-Nesbitt)
