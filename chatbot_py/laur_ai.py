@@ -35,7 +35,6 @@ class LaurAI:
             self.cleaned_data = read_pickle("data/master_data_cleaned.pkl")
             if len(self.cleaned_data) != len(self.data):
                 # if the data does not match, retrain
-                print("New data found. Please wait as this data is processed")
                 self.cleaned_data = self.data_cleaner.clean_data(self.data)
                 # to improve speed, save to master cleaned
                 self.cleaned_data.to_pickle("data/master_data_cleaned.pkl", protocol=4)
@@ -141,7 +140,6 @@ class LaurAI:
             else:
                 finalText += i + " "
         
-        # print(finalText)
         return finalText
     
 
@@ -201,34 +199,3 @@ class LaurAI:
         i = randint(0,len(max_index)-1)
         return max_index[i]
 
-
-print("Please wait as Laur.AI loads")
-
-data_master = read_csv("data/master_data.csv")
-laurBot = LaurAI(data_master)
-
-# First we need to clean the data, so it is all lower case and without special 
-# characters or numbers
-# We can then tokenize the data, which means splitting it up into words instead
-# of a phrase. We also need to know the type of word
-
-# Then we lematize which means to convert the word into it's base form
-laurBot.create_lemma()
-
-# Now we can start to create the bag of words
-laurBot.create_bag_of_words()
-
-
-# Then we can ask a question
-print("Ask me anything :)")
-print("Control C or Type \"Bye\" to quit")
-while(True):
-    context = input("> ")
-    if context.lower() == "bye":
-        print("bye :))")
-        break
-    else:
-        response = laurBot.askQuestion(context.lower())
-        print(response)
-
-print("Thank you for talking to Laur.AI")
