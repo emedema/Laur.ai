@@ -58,14 +58,14 @@
         
     chatMessage: function() {
         if(this.message != '') {
-            let chatBotResponse = '';
+            let chatRespond = '';
             // User Input
             this.createNewElement('responses','right','60%', this.message);
 
-            chatBotResponse = this.process();
+            chatRespond = this.process();
     
             // New chatbot response
-            this.createNewElement('responses','left', '60%' , chatBotResponse);
+            this.createNewElement('responses','left', '60%' , chatRespond);
             
             // Make chat scrollable 
             this.scrollable(); 
@@ -74,28 +74,31 @@
     },
 
     // Messages as list elements, styled based on sender
-    createNewElement: function(tagID, align, width, msg) {   
-            let newLi = document.createElement('li');
-            newLi.textContent = msg;
-            newLi.style.textAlign = align;
+    createNewElement: function(id, align, width, msg) {   
+            let listElement = document.createElement('li');
+            listElement.textContent = msg;
+            listElement.style.textAlign = align;
+
         // USER STYLING
             if(align == 'right'){ 
-            newLi.style.backgroundColor = "rgb(100, 94, 157, 0.4)" ; 
+            listElement.style.backgroundColor = "rgb(100, 94, 157, 0.4)" ; 
             }
+
         // BOT STYLING
             if(align == 'left'){ 
-            newLi.style.backgroundColor = "rgb(153, 213, 201, 0.4)" ; 
+            listElement.style.backgroundColor = "rgb(153, 213, 201, 0.4)" ; 
             }
-            newLi.style.borderRadius = "10px" ;
-            newLi.style.padding="14px"; 
-            newLi.style.margin="10px 0";
-            newLi.style.left="310px";
-            newLi.style.zIndex = "2";
-            newLi.style.maxWidth = width;
-            newLi.style.fontSize = "16px";
-            newLi.style.fontFamily = "Raleway, bold"
-            let dest = document.getElementById(tagID).getElementsByTagName('ul')[0];
-            dest.appendChild(newLi);
+
+            listElement.style.borderRadius = "10px" ;
+            listElement.style.padding="14px"; 
+            listElement.style.margin="10px 0";
+            listElement.style.left="310px";
+            listElement.style.zIndex = "2";
+            listElement.style.maxWidth = width;
+            listElement.style.fontSize = "16px";
+            listElement.style.fontFamily = "Raleway, bold"
+            let dest = document.getElementById(id).getElementsByTagName('ul')[0];
+            dest.appendChild(listElement);
 
           // BOT CHAT
             if(align == "left"){ 
@@ -107,10 +110,10 @@
             imgBot.style.position="relative";
             imgBot.style.top="55px";
             imgBot.style.left="-48px";
-            newLi.style.position= "relative";
-            newLi.style.left="80px";
+            listElement.style.position= "relative";
+            listElement.style.left="80px";
             dest.appendChild(imgBot);
-            dest.appendChild(newLi);
+            dest.appendChild(listElement);
             }
 
           // USER CHAT
@@ -121,11 +124,12 @@
             imgChat.setAttribute("width", "60px");
             imgChat.style.position="relative";
             imgChat.style.top="-60px";
-            newLi.style.position= "relative";
+            listElement.style.position= "relative";
             imgChat.style.left="915px";
-            dest.appendChild(newLi);
+            dest.appendChild(listElement);
             dest.appendChild(imgChat);}
     },
+
     scrollable: function() {      
       let chatbox = document.getElementById('chatbox');
       chatbox.scrollTop = chatbox.scrollHeight;
