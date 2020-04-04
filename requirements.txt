@@ -2,3 +2,5 @@ pandas
 nltk
 numpy
 sklearn
+textblob
+spacy
