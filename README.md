@@ -12,10 +12,10 @@ Laur.ai was created by:
 * **Lauren St.Clair** - [laurenstclair](https://github.com/laurenstclair)
 
 ## Scenario
-Laur.ai is a chatbot designed to help people practice and simulate first meet-up conversations. This means that the bot will cover a lot of general topics for people to talk about. Users will start by asking a question about something they are passionate about. If Laur does not know the topic she will respond by saying she does not know, and propose a new idea. If she does know the topic, the conversation will continue until we reach an unknown factor in the conversation/end of Laur’s knowledge.
+Laur.ai is a chatbot designed simulate reddit conversations. This means that the bot will cover a lot of general topics for people to talk about. Users will start by initating a conversation with a greeting or a question. If Laur does not know the topic she will respond by saying that she does not recognize the topic. If she does know the topic, the conversation will continue until we reach a completely unknown factor in the conversation/end of Laur’s knowledge, if a topic is vaguely known, Laur.ai will attempt to respond coherently. If there is an internal error, Laur.ai will respond with “I am miss pwesident uwu”.
 
 ## Implementation
-The backend implementation of Laur.ai was done through python3 and the Natural Language Toolkit (nltk) library.
+The backend implementation of Laur.ai was done through python3 and the Natural Language Toolkit (nltk) library. The front-end GUI was built through Vue.js.
 
 ## How to install
 1. Create a virtual environment using python3
