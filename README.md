@@ -65,7 +65,7 @@ laur_ai uses an autocorrect function that will guess the most similar word to a 
 
 To handle the errors in the code, we used the TextBlob implementation of autocorrection. This provides predictions based on input of what a word could or should be. This feature has a 70% expected positive result, as it tries to find the closest predicted word to the input without any user intervention. Extending on Textblob, we used named entity recognition to recognize proper nouns and ignore any auto-correction of these nouns, to avoid situations where the auto-correct will attempt to correct a name.
 
-This allows the user to still have a logical communication with the chatbot, even if a missplet input is passed in as context.
+This allows the user to still have a logical communication with the chatbot, even if a misspelt input is passed in as context.
 
 > im sorry im just trying to testt autocorrect    
 Well, I got one for this, so that's good.
