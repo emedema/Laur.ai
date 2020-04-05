@@ -1,0 +1,17 @@
+[b][13:28:58] Laur:[/b] HI! My name is Laur and I am a chatbot!
+[b][13:29:13] User:[/b] Hi
+[b][13:29:13] Laur:[/b] Hey
+
+What's happening with you? 
+[b][13:29:34] User:[/b] Nothing much, very stressed
+[b][13:29:34] Laur:[/b] You know many things my friend!  
+[b][13:29:51] User:[/b] I hope so, this chatbot is driving me insane
+[b][13:29:51] Laur:[/b] HA! Noticed "so" used a bit in your post! :) 
+[b][13:30:05] User:[/b] How are you?
+[b][13:30:05] Laur:[/b] What? 
+[b][13:30:15] User:[/b] Do robots feel emotions?
+[b][13:30:15] Laur:[/b] Do you feel emotions? 
+[b][13:30:28] User:[/b] Do robots eat?
+[b][13:30:28] Laur:[/b] I already ate too much, I finished a footlong subway  
+[b][13:30:45] User:[/b] bye
+[b][13:30:45] Laur:[/b] No. 
