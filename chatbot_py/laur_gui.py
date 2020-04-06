@@ -87,10 +87,7 @@ root_widget = Builder.load_string('''
                 canvas.before:
                     Color:
                         rgba: .55,.23,.23,.05
-                    BorderImage:
-                        source: 'zelda.png'
-                        pos: self.x - 1, self.y - 1
-                        size: (root.width * 0.35)+2, root.height - 98
+
                     Color:
                         rgba: .55,.23,.23,.05
                     Rectangle:
@@ -159,12 +156,12 @@ class Laur_AI(App):
         self.cleaned_data = DataFrame(columns=["Question", "Answer"])
         # use data if provided
         if use_cleaned_data:
-            self.cleaned_data = read_pickle("/Users/lauren/Desktop/Laur.ai-gui/data/master_data_cleaned.pkl")
+            self.cleaned_data = read_pickle("data/master_data_cleaned.pkl")
             if len(self.cleaned_data) != len(self.data):
                 # if the data does not match, retrain
                 self.cleaned_data = self.data_cleaner.clean_data(self.data)
                 # to improve speed, save to master cleaned
-                self.cleaned_data.to_pickle("/Users/lauren/Desktop/Laur.ai-gui/data/master_data_cleaned.pkl", protocol=4)
+                self.cleaned_data.to_pickle("data/master_data_cleaned.pkl", protocol=4)
 
         self.finalText = DataFrame(columns=["Lemmas"])
         self.c = CountVectorizer()
@@ -368,7 +365,7 @@ class Laur_AI(App):
 
 print("Please wait as Laur.AI loads")
 
-data_master = read_csv("/Users/lauren/Desktop/Laur.ai-gui/data/master_data.csv")
+data_master = read_csv("data/master_data.csv")
 
 
 # First we need to clean the data, so it is all lower case and without special
