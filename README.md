@@ -15,7 +15,7 @@ Laur.ai was created by:
 Laur.ai is a chatbot designed simulate reddit conversations. This means that the bot will cover a lot of general topics for people to talk about. Users will start by initating a conversation with a greeting or a question. If Laur does not know the topic she will respond by saying that she does not recognize the topic. If she does know the topic, the conversation will continue until we reach a completely unknown factor in the conversation/end of Laur’s knowledge, if a topic is vaguely known, Laur.ai will attempt to respond coherently. If there is an internal error, Laur.ai will respond with “I am miss pwesident uwu”.
 
 ## Implementation
-The backend implementation of Laur.ai was done through python3 and the Natural Language Toolkit (nltk) library. The front-end GUI was built through Vue.js.
+The backend implementation of Laur.ai was done through python3 and the Natural Language Toolkit (nltk) library. The front-end GUI was built with Kivy.
 
 ## How to install
 1. Create a virtual environment using python3
@@ -40,7 +40,7 @@ python chatbot_py/laur_gui.py
 ## Class Structure
 All files are named according to python naming conventions, all lowercase with underscores signifying new words. Our classes are organized using the following structure. Python files can be found in the folder /chatbot_py and includes the files clean_master_data.py, combine_data_to_master.py, process_transcript.py, and laur_ai.py. 
 
-## laur.ai.py
+## laur_ai.py
 laur_ai.py is built using the nltk library. The data is run throw a series of steps to create a bag of words associated by comment and response after undergoing lemmatization,
   1. Text data is cleaned by the removal of numbers and conversion to lowercase.
   2. Tokenize and tag words: words are split up from phrases to then be categorized based on the type
