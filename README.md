@@ -37,8 +37,10 @@ python chatbot_py/prepare_laurAI.py
 ```
 python chatbot_py/laur_gui.py
 ```
+Note: Running prepare_laurAI.py can take quite some time.
+
 ## Class Structure
-All files are named according to python naming conventions, all lowercase with underscores signifying new words. Our classes are organized using the following structure. Python files can be found in the folder /chatbot_py and includes the files clean_master_data.py, combine_data_to_master.py, process_transcript.py, and laur_ai.py. 
+All files are named according to python naming conventions, all lowercase with underscores signifying new words. Our classes are organized using the following structure. Python files can be found in the folder /chatbot_py and includes the files clean_master_data.py, combine_data_to_master.py, process_transcript.py, prepare_laurAI.py, laur_ai.py, and laur_gui.py. 
 
 ## laur_ai.py
 laur_ai.py is built using the nltk library. The data is run throw a series of steps to create a bag of words associated by comment and response after undergoing lemmatization,
