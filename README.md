@@ -30,11 +30,12 @@ source venv/bin/activate
 ```
 pip install -r requiremnts.txt
 python -m spacy download en
+python -m pip install kivy
 python chatbot_py/prepare_laurAI.py
 ```
 4. Run the main file
 ```
-python chatbot_py/laur_ai.py
+python chatbot_py/laur_gui.py
 ```
 ## Class Structure
 All files are named according to python naming conventions, all lowercase with underscores signifying new words. Our classes are organized using the following structure. Python files can be found in the folder /chatbot_py and includes the files clean_master_data.py, combine_data_to_master.py, process_transcript.py, and laur_ai.py. 
