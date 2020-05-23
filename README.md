@@ -28,7 +28,7 @@ source venv/bin/activate
 ```
 3. Install all dependencies
 ```
-pip install -r requiremnts.txt
+pip install -r requirements.txt
 python -m spacy download en
 python -m pip install kivy
 python chatbot_py/prepare_laurAI.py
